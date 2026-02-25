@@ -9,9 +9,11 @@ test('List authenticated user repositories', async ({ request }) => {
     }
   });
 
+  console.log('Status Code:', response.status());
   expect(response.status()).toBe(200);
 
   const body = await response.json();
   expect(Array.isArray(body)).toBeTruthy();
+  console.log('Response Body:', body);
 
 });
