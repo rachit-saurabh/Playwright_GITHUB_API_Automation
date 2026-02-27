@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-// This test checks that the response from the /user endpoint contains the expected fields (login, id, url) for the authenticated user.
+// This test verifies that the response from the /user endpoint contains the expected fields (login, id, url) for the authenticated user.
 test('Validate repository response fields', async ({ request }) => {
 
   const response = await request.get('/user', {

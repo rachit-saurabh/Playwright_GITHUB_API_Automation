@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import userData from '../../test-data/users.json';
 
-// This test checks that we can successfully retrieve the public user details of a specified user (octocat) using the /users/{username} endpoint.
+// This test verifies that we can successfully retrieve the public user details of a specified user (octocat) using the /users/{username} endpoint.
 test('Get public user details - octocat', async ({ request }) => {
   const response = await request.get(`/users/${userData.validUser}`);
   const body = await response.json();
