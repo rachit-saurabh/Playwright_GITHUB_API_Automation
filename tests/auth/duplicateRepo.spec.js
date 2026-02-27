@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 
+// This test checks that creating a repository with a name that already exists for the authenticated user fails with a 422 Unprocessable Entity status code.
 test('Creating duplicate repository should fail', async ({ request }) => {
 
   const repoName = `duplicate-test-${Date.now()}`;

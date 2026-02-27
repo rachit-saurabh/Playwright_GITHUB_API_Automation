@@ -11,5 +11,5 @@ test('Get authenticated user details', async ({ request }) => {
     console.log('Status Code:', response.status());
 
   expect(response.status()).toBe(200);
-  expect(body.login).toBeTruthy();
+  expect(body.login).toBeTruthy(); // should not be empty/null/false.
 });

@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 
+// This test checks that creating a repository with an invalid token fails with a 401 Unauthorized status code.
 test('Unauthorized repo creation should fail', async ({ request }) => {
 
   const response = await request.post('/user/repos', {

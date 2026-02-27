@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 
+// This test checks that we can successfully retrieve the authenticated user's repositories using the /user/repos endpoint.
 test('List authenticated user repositories', async ({ request }) => {
 
   const response = await request.get('/user/repos', {
