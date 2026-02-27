@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { getAuthHeaders } from '../../utils/apiHeaders';
 
+// This test checks that we can successfully retrieve the authenticated user's details using the /user endpoint.
 test('Get authenticated user details', async ({ request }) => {
   const response = await request.get('/user', {
     headers: getAuthHeaders(),

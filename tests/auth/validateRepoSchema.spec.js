@@ -13,7 +13,7 @@ test('Validate repository response fields', async ({ request }) => {
   expect(response.status()).toBe(200);
 
   const body = await response.json();
-
+// Verifying that the API response contains required fields:
   expect(body).toHaveProperty('login');
   expect(body).toHaveProperty('id');
   expect(body).toHaveProperty('url');
